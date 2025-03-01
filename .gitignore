@@ -1,0 +1,7 @@
+__pycache__/
+.DS_Store
+venv/
+test-output.csv
+test-output.txt
+videos/
+images/
