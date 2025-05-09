@@ -113,14 +113,11 @@ def run_model(
     cap.release()
     cv2.destroyAllWindows()
 
-# Webcam or CCTV Test
-# https://surakarta.atcsindonesia.info:8086/camera/UNSTimur.flv
-
 if __name__ == '__main__':
     # Run the model
     run_model("videos/test.mp4", 
         skip_frames=6,
         write_results=False,
         write_interval=3,
-        export="videos/output/test_output.mp4"
+        # export="videos/output/test_output.mp4"
     )

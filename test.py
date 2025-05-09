@@ -4,7 +4,7 @@ from alpr.alpr import ALPR
 from run import get_device, write_image
 import pandas as pd
 
-def scan_images(directory):
+def scan_images(directory: str):
     image_extensions = ['.jpg', '.jpeg', '.png', '.wepb']
     image_files = []
 
@@ -14,9 +14,8 @@ def scan_images(directory):
 
     return image_files
 
-def main():
-    base_path = 'images'
-    image_files = scan_images('images')
+def test(base_path: str):
+    image_files = scan_images(base_path)
     alpr = ALPR(device=get_device())
 
     output_path = f"{base_path}/output"
@@ -70,4 +69,4 @@ def main():
     print(f"Accuracy ($%)  : {percentage:.2f}%")
 
 if __name__ == '__main__':
-    main()
+    test("images")
